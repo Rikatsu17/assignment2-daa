@@ -9,18 +9,36 @@ Course: Design and analysis of algorithms
 This project implements **Insertion Sort** with performance tracking and benchmarking using Java, Maven, and JUnit.  
 It is part of Assignment 2: *Algorithmic Analysis and Peer Code Review*.
 
+## Contents
+algorithms/InsertionSort.java — insertion sort implementation with performance tracking and minor early-stop optimization.<br>
+
+metrics/PerformanceTracker.java — counts comparisons, swaps, and array accesses (reads/writes).<br>
+
+cli/BenchmarkRunner.java — command-line interface for benchmarking with multiple input sizes and data patterns.<br>
+
+src/test/java/.../InsertionSortTest.java — JUnit 5 tests for small, sorted, reversed, and random arrays.<br>
+
+docs/performance-plots/ — folder containing CSV outputs and runtime/comparison graphs.<br>
+
 ## Features
 - Maven project structure with JUnit tests
 - Performance metrics (comparisons, accesses, swaps)
 - Command-line benchmark tool (`BenchmarkRunner`)
 - Handles sorted, reverse-sorted, random, and nearly-sorted arrays
 
-## Complexity
+## Algorithm Details
+
 | Case | Time Complexity | Space Complexity |
 |------|------------------|------------------|
 | Best | Θ(n) | O(1) |
 | Average | Θ(n²) | O(1) |
 | Worst | Θ(n²) | O(1) |
+
+Optimizations:<br>
+
+Early termination when the current element is already greater than the previous (avoids unnecessary comparisons).<br>
+
+Minimal array writes — only shifts necessary elements, not every position.<br>
 
 ## Example Benchmark Output
 
@@ -44,4 +62,6 @@ assignment2-insertion-sort/<br>
 │ └── performance-plots/<br>
 ├── README.md<br>
 └── pom.xml<br>
+
+##Conclusion
 
