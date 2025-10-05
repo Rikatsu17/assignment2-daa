@@ -63,5 +63,15 @@ assignment2-insertion-sort/<br>
 ├── README.md<br>
 └── pom.xml<br>
 
-##Conclusion
+## Conclusion
 
+The implemented Insertion Sort algorithm successfully demonstrates the expected theoretical behavior:<br>
+
+It performs efficiently on small and nearly sorted datasets, showing linear-like performance.<br>
+
+It exhibits quadratic growth (Θ(n²)) in runtime and operations for large or reverse-sorted inputs, aligning with its theoretical complexity.<br>
+
+Performance metrics collected by the PerformanceTracker confirm clear differences between best, average, and worst cases.<br>
+
+Although Insertion Sort is not optimal for large datasets, it remains a valuable algorithm for educational analysis, stability testing, and hybrid sorting strategies (e.g., combining it with faster algorithms for small partitions).
+The benchmarking results validate both correctness and scalability, providing a solid foundation for future optimization or algorithm comparison work.
